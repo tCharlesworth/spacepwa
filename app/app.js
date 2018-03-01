@@ -130,3 +130,11 @@ $(document).ready(function(){
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
 });
+
+
+/// Service Workers
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('./app/service-worker.js')
+    .then(function() {console.log(`Service Worker Registered`)});
+}
