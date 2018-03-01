@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/materialize.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <title>Space X Lookup</title>
+</head>
+
+<body>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Menu</h4>
+      <p>What information would you like to see?</p>
+      <ul>
+        <li><a id="btnRockets" class="modal-action modal-close waves-effect waves-green btn-flat">Rockets</a></li>
+        <li><a id="btnLaunchpads" class="modal-action modal-close waves-effect waves-green btn-flat">Launchpads</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <nav>
+    <div class="nav-wrapper blue">
+      <a href="#" class="brand-logo">Space X</a>
+      <ul id="nav-mobile" class="right">
+        <li>
+          <!-- Modal Trigger -->
+          <a id="btnMenu" class="modal-trigger">Menu</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrapper">
+    <div class="container">
+
+    </div>
+      
+    <div id="templates" hidden>
+      <!-- Rocket Template -->
+      <div class="rocketTemplate row">
+        <div class="col s12 m8 offset-m2">
+          <div class="card">
+            <div class="card-image">
+              <img class="rocket-image" src="./images/rocket/default.png" />
+              <span class="card-title rocket-name">Title</span>
+            </div>
+            <div class="card-content">
+              <ul>
+                <li class="rocket-weight">Weight</li>
+                <li class="rocket-firstflight">First Flight</li>
+                <li class="rocket-cost">Cost Per Launch</li>
+                <li class="rocket-success">Success Rate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Launchpad Template -->
+      <div class="launchpadTemplate row">
+        <div class="col s12 m8 offset-m2">
+          <div class="card">
+            <div class="card-image">
+              <img class="launchpad-image" src="./images/launchpad/default.jpg" />
+              <span class="card-title">Title</span>
+            </div>
+            <div class="card-content">
+              <ul>
+                <li class="launchpad-name">Name</li>
+                <li class="launchpad-status">Status</li>
+                <li class="launchpad-location">Location</li>
+                <li><p class="launchpad-details">Details</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Templates -->
+    </div>
+
+    <div class="loader">
+      <svg viewBox="0 0 32 32" width="32" height="32">
+        <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+      </svg>
+    </div>
+
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./app/app.js"></script>
+  <script src="./app/libraries/materialize.min.js"></script>
+</body>
+
+</html>
